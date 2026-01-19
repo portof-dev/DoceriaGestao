@@ -1,11 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using DoceriaGestao.Data;
+using DoceriaGestao.Repositories.Interface;
+using DoceriaGestao.Repositories.Implementations;
 var builder = WebApplication.CreateBuilder(args);
 
 var  connectionString= builder.Configuration.GetConnectionString("DefaultConnection");
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(connectionString)); //** instanciando a conexao com o banco de data e chamando o json
+builder.Services.AddScoped<IInsumoRepository, InsumoRepository>(); //*** Registra o repositorio
 
 var app = builder.Build();
 
