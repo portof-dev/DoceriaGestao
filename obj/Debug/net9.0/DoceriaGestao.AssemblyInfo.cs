@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DoceriaGestao")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a91c0e9bbed1dbf28b92c204f34fc3ee4740b103")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fd13d0f44c41c75d699340870f7661b831bc314")]
 [assembly: System.Reflection.AssemblyProductAttribute("DoceriaGestao")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DoceriaGestao")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

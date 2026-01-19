@@ -9,7 +9,7 @@ namespace DoceriaGestao.Models
     {
         public int Id {get;set;}
         public string? NomeDoProduto {get;set;}
-        public decimal PrecoProduto {get;set;}
+        public decimal PrecoCompra {get;set;}
         public decimal QuantidadeCompra {get;set;}
         
         public  UnidadeMedida Unidade {get;set;}
