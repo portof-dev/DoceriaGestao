@@ -136,6 +136,7 @@
 /mnt/meu_hd/SoniaBakers/DoceriaGestao/obj/Debug/net9.0/DoceriaGestao.MvcApplicationPartsAssemblyInfo.cache
 /mnt/meu_hd/SoniaBakers/DoceriaGestao/obj/Debug/net9.0/DoceriaGestao.RazorAssemblyInfo.cache
 /mnt/meu_hd/SoniaBakers/DoceriaGestao/obj/Debug/net9.0/DoceriaGestao.RazorAssemblyInfo.cs
+/mnt/meu_hd/SoniaBakers/DoceriaGestao/obj/Debug/net9.0/DoceriaGestao.sourcelink.json
 /mnt/meu_hd/SoniaBakers/DoceriaGestao/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /mnt/meu_hd/SoniaBakers/DoceriaGestao/obj/Debug/net9.0/scopedcss/bundle/DoceriaGestao.styles.css
 /mnt/meu_hd/SoniaBakers/DoceriaGestao/obj/Debug/net9.0/scopedcss/projectbundle/DoceriaGestao.bundle.scp.css
