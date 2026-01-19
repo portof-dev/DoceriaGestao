@@ -1,0 +1,30 @@
+@model IEnumerable<DoceriaGestao.Models.Insumo>
+
+<div class="container mt-4">
+    <h2>Lista de Insumos</h2>
+    <a asp-action="Create" class="btn btn-primary mb-3">Novo Insumo</a>
+
+    <table class="table table-hover shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Preço Total</th>
+                <th>Estoque Comprado</th>
+                <th>Unidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.NomeDoProduto</td>
+                    <td>@item.PrecoCompra.ToString("C2")</td>
+                    <td>
+                        @item.QuantidadeItens x @item.ValorMedida.ToString("N2")
+                    </td>
+                    <td>@item.Unidade</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

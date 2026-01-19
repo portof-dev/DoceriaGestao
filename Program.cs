@@ -2,6 +2,16 @@ using Microsoft.EntityFrameworkCore;
 using DoceriaGestao.Data;
 using DoceriaGestao.Repositories.Interface;
 using DoceriaGestao.Repositories.Implementations;
+using System.Globalization;
+
+
+
+var cultureInfo = new CultureInfo("en-US");
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 var  connectionString= builder.Configuration.GetConnectionString("DefaultConnection");

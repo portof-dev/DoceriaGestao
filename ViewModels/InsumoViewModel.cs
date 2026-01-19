@@ -20,10 +20,15 @@ namespace DoceriaGestao.ViewModels
         [Display(Name = "Preço de Compra (R$)")]
         public decimal PrecoCompra {get;set;}
 
-        [Required(ErrorMessage = "Informe a quantidade de Comprada.")]
+        [Required(ErrorMessage = "Informe a quantidade Comprada.")]
         [Range(0.01, 100000, ErrorMessage = "A quantidade deve ser maior que zero.")]
         [Display(Name = "Quantidade de Compra")]
-        public decimal QuantidadeCompra {get;set;}
+
+         public int QuantidadeItens {get;set;}
+         [Required(ErrorMessage = "Informe o volume de itens Comprados")]
+         [Range(0.01,10000,ErrorMessage = "O volume deve ser maior que 0")]
+         [Display (Name ="volume De Compra")]
+        public decimal ValorMedida {get;set;}
         [Required(ErrorMessage = "Selecione a unidade de medida.")]
         [Display(Name = "Unidade (g,ml,un,kg)")]
         public string? UnidadeMedida {get;set;}

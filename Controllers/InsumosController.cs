@@ -40,7 +40,8 @@ namespace DoceriaGestao.Controllers
                 {
                     NomeDoProduto = viewModel.NomeDoProduto,
                     PrecoCompra = viewModel.PrecoCompra,
-                    QuantidadeCompra = viewModel.QuantidadeCompra,
+                    QuantidadeItens = viewModel.QuantidadeItens,
+                    ValorMedida = viewModel.ValorMedida,
                     Unidade = Enum.Parse<UnidadeMedida> (viewModel.UnidadeMedida!)
                 };
 
