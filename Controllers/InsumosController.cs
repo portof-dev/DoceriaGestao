@@ -55,5 +55,19 @@ namespace DoceriaGestao.Controllers
             var Insumos = await _insumoRepository.GetAllAsync();
             return View(Insumos);
         }
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var insumo = await _insumoRepository.GetByIdAsync(id);
+
+            if (insumo == null)
+            {
+                return NotFound();
+            }
+
+        }
     }
 }
