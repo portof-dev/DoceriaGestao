@@ -7,7 +7,7 @@ using DoceriaGestao.Models;
 
 namespace DoceriaGestao.Repositories.Interface
 {
-    public interface IInsumoRepository // Interface de serviço onde vou colocar o CRUD 
+    public interface IInsumoRepository //** Interface de serviço onde vou colocar o CRUD 
     {
 
         //TODO USAMOS O TASK e ASYNC chamamos a programação assincrona que  evita de o sistema travar esperando o DB(Banco de Dados) responder melhorando a performance

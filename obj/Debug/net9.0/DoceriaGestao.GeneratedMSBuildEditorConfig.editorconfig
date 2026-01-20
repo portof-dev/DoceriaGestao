@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5zdW1vcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/mnt/meu_hd/SoniaBakers/DoceriaGestao/Views/Insumos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5zdW1vcy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/mnt/meu_hd/SoniaBakers/DoceriaGestao/Views/Insumos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5zdW1vcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

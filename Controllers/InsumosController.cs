@@ -59,7 +59,7 @@ namespace DoceriaGestao.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> Edit(int id) //*** METODO PARA EDITAR OS PRODUTOS
         {
             var insumo = await _insumoRepository.GetByIdAsync(id);
 
@@ -67,7 +67,64 @@ namespace DoceriaGestao.Controllers
             {
                 return NotFound();
             }
+            // *** Transforma a model(banco) em viewModel(tela)
+            var viewModel = new InsumoViewModel
+            {
+                Id = insumo.Id,
+                NomeDoProduto = insumo.NomeDoProduto,
+                PrecoCompra = insumo.PrecoCompra,
+                QuantidadeItens = insumo.QuantidadeItens,
+                ValorMedida = insumo.ValorMedida,
+                UnidadeMedida = insumo.Unidade.ToString()
+            };
+            return View(viewModel);
+        }
 
+        [HttpPost] //*** RECEBE OS NOVOS DADOS E SALVA NO BANCO
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, InsumoViewModel viewModel)
+        {
+            if (id != viewModel.Id)   return NotFound();
+
+            if (ModelState.IsValid)
+            {
+                var insumo = new Insumo
+                {
+                    Id = viewModel.Id,
+                    NomeDoProduto = viewModel.NomeDoProduto,
+                    PrecoCompra = viewModel.PrecoCompra,
+                    QuantidadeItens = viewModel.QuantidadeItens,
+                    ValorMedida = viewModel.ValorMedida,
+                    Unidade  = Enum.Parse<UnidadeMedida>(viewModel.UnidadeMedida!)
+                };
+
+                await _insumoRepository.UpdateAsync(insumo);
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(viewModel);
+                
+            
+        }
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var insumo = await _insumoRepository.GetByIdAsync(id);
+            if (insumo == null)
+            
+            return NotFound();
+            
+                
+            return View(insumo); //** passa o insumo direto para mostrar os detalhes na tela
+        }
+
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            await _insumoRepository.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
