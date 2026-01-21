@@ -11,7 +11,7 @@ namespace DoceriaGestao.Models
         public string? NomeDoProduto {get;set;}
         public decimal PrecoCompra {get;set;}
         public int QuantidadeItens {get;set;}
-        public decimal ValorMedida {get;set;}
+        
         
         public  UnidadeMedida Unidade {get;set;}
     }
