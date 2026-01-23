@@ -10,9 +10,11 @@ namespace DoceriaGestao.Models
         public int Id {get;set;}
         public string? NomeDoProduto {get;set;}
         public decimal PrecoCompra {get;set;}
-        public int QuantidadeItens {get;set;}
+        public int Quantidade {get;set;}
         
         
         public  UnidadeMedida Unidade {get;set;}
+
+        public decimal CustoUnitario => Quantidade > 0 ? PrecoCompra / Quantidade : 0;
     }
 }

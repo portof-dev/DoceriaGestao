@@ -23,11 +23,8 @@ namespace DoceriaGestao.ViewModels
         [Required(ErrorMessage = "Informe a quantidade Comprada.")]
         [Range(0.01, 100000, ErrorMessage = "A quantidade deve ser maior que zero.")]
         [Display(Name = "Quantidade de Compra")]
-
-         public int QuantidadeItens {get;set;}
-         [Required(ErrorMessage = "Informe o volume de itens Comprados")]
-         [Range(0.01,10000,ErrorMessage = "O volume deve ser maior que 0")]
-         [Display (Name ="volume De Compra")]
+         public int Quantidade {get;set;}
+      
         public decimal ValorMedida {get;set;}
         [Required(ErrorMessage = "Selecione a unidade de medida.")]
         [Display(Name = "Unidade (g,ml,un,kg)")]

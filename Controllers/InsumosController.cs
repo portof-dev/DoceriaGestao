@@ -40,7 +40,7 @@ namespace DoceriaGestao.Controllers
                 {
                     NomeDoProduto = viewModel.NomeDoProduto,
                     PrecoCompra = viewModel.PrecoCompra,
-                    QuantidadeItens = viewModel.QuantidadeItens,
+                    Quantidade = viewModel.Quantidade,
                     
                     Unidade = Enum.Parse<UnidadeMedida> (viewModel.UnidadeMedida!)
                 };
@@ -73,7 +73,7 @@ namespace DoceriaGestao.Controllers
                 Id = insumo.Id,
                 NomeDoProduto = insumo.NomeDoProduto,
                 PrecoCompra = insumo.PrecoCompra,
-                QuantidadeItens = insumo.QuantidadeItens,
+                Quantidade = insumo.Quantidade,
                 UnidadeMedida = insumo.Unidade.ToString()
             };
             return View(viewModel);
@@ -92,7 +92,7 @@ namespace DoceriaGestao.Controllers
                     Id = viewModel.Id,
                     NomeDoProduto = viewModel.NomeDoProduto,
                     PrecoCompra = viewModel.PrecoCompra,
-                    QuantidadeItens = viewModel.QuantidadeItens,
+                    Quantidade = viewModel.Quantidade,
                    
                     Unidade  = Enum.Parse<UnidadeMedida>(viewModel.UnidadeMedida!)
                 };

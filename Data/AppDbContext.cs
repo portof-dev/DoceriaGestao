@@ -16,6 +16,8 @@ namespace DoceriaGestao.Data
 
 
         public DbSet<Insumo> Insumos {get;set;} //*** Instanciando a classe para o meu banco de dados 
+        public DbSet <Receita> Receitas {get;set;}
+        public DbSet <ReceitaIngrediente> ReceitaIngredientes {get;set;}
         
     
 }

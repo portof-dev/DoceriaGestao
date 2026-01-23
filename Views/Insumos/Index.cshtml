@@ -11,24 +11,25 @@
                 <th>Preço Total</th>
                 <th>Estoque Comprado</th>
                 <th>Unidade</th>
+                <th>Custo Unitario</th>
                 <th class="text-center">Ações</th> </tr>
         </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.NomeDoProduto</td>
-                    <td>@item.PrecoCompra.ToString("C2")</td>
-                    <td>
-                        @item.QuantidadeItens.ToString("N2")
-                    </td>
-                    <td>@item.Unidade</td>
-                    <td class="text-center">
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Excluir</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
+       <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.NomeDoProduto</td>
+            <td>@item.PrecoCompra.ToString("C2")</td>
+            <td>@item.Quantidade.ToString("N2")</td> 
+            <td>@item.Unidade</td>
+            <td class="fw-bold text-success">
+                @item.CustoUnitario.ToString("C2") / @item.Unidade
+            </td>
+            <td class="text-center"> <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Excluir</a>
+            </td>
+        </tr>
+    }
+</tbody>
     </table>
 </div>

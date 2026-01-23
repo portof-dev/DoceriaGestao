@@ -1,0 +1,31 @@
+@model IEnumerable<DoceriaGestao.Models.Receita>
+
+<div class="container mt-4">
+    <h2>Fichas Técnicas (Receitas)</h2>
+    <a asp-action="Create" class="btn btn-success mb-3">Nova Receita</a>
+
+    <table class="table table-hover shadow">
+        <thead class="table-dark">
+            <tr>
+                <th>Nome da Receita</th>
+                <th>Rendimento</th>
+                <th>Custo Total</th>
+                <th>Custo por Unidade</th>
+                <th class="text-center">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.NomeReceita</td> <td>@item.Rendimento unidades</td>
+                    <td class="text-primary fw-bold">@item.CustoTotal.ToString("C2")</td>
+                    <td class="text-success fw-bold">@item.CustoPorRendimento.ToString("C2")</td>
+                    <td class="text-center">
+                        <a class="btn btn-sm btn-info">Detalhes</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
